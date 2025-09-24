@@ -9,9 +9,9 @@ import {
 } from "@/components/ui/hover-card"
 import {
   Dialog,
-  DialogContent,
   DialogTrigger,
 } from "@/components/ui/dialog"
+import { DialogContent } from "@/components/ui/custom-dialog"
 import { useMediaQuery } from "@/hooks/use-media-query"
 
 export default function AboutPage() {
@@ -21,15 +21,15 @@ export default function AboutPage() {
       <div className="max-w-xl mx-auto">
         <div className="mb-4 -ml-12">
           <div className="relative">
-            <Image
-              src="/images/tensorforest-logo.png"
-              alt="tensorforest logo"
-              width={120}
-              height={120}
-              className="object-contain"
+          <Image
+            src="/images/tensorforest-logo.png"
+            alt="tensorforest logo"
+            width={120}
+            height={120}
+            className="object-contain"
               onContextMenu={(e) => e.preventDefault()}
               draggable="false"
-            />
+          />
             <div className="absolute inset-0" onContextMenu={(e) => e.preventDefault()}></div>
           </div>
         </div>
@@ -47,7 +47,7 @@ export default function AboutPage() {
                     Our first prototype generated forest risk maps using feature extraction on aerial imagery and vegetation indices.
                   </p>
                 </DialogTrigger>
-                <DialogContent className="w-[250px] !rounded-none">
+                <DialogContent className="w-[250px] !rounded-none bg-white p-4 border shadow-md">
                   <div className="space-y-4">
                     <div className="relative aspect-square w-full overflow-hidden">
                       <Image
@@ -101,7 +101,7 @@ export default function AboutPage() {
                     Our second prototype added autonomous flight and onboard inference, so we could process data in real-time while covering bigger regions.
                   </p>
                 </DialogTrigger>
-                <DialogContent className="w-[250px] !rounded-none">
+                <DialogContent className="w-[250px] !rounded-none bg-white p-4 border shadow-md">
                   <div className="space-y-4">
                     <div className="relative aspect-square w-full overflow-hidden">
                       <Image
@@ -155,7 +155,7 @@ export default function AboutPage() {
                     Our third prototype could build detailed vegetation maps, digital surface models, and orthomosaic outputs.
                   </p>
                 </DialogTrigger>
-                <DialogContent className="w-[250px] !rounded-none">
+                <DialogContent className="w-[250px] !rounded-none bg-white p-4 border shadow-md">
                   <div className="space-y-4">
                     <div className="relative aspect-square w-full overflow-hidden">
                       <Image
@@ -225,63 +225,63 @@ export default function AboutPage() {
             <p className="text-xs text-gray-500 mb-4">Supported by</p>
              <div className="flex gap-4 md:gap-8 items-center overflow-x-auto pb-2">
               <div className="relative">
-                <Image
-                  src="/logos/Entrepreneurs_First_Logo.png"
-                  alt="E/F"
-                  width={80}
-                  height={80}
+              <Image
+                src="/logos/Entrepreneurs_First_Logo.png"
+                alt="E/F"
+            width={80}
+            height={80}
                    className="w-14 md:w-16 h-auto filter grayscale hover:grayscale-0 transition-all duration-300 flex-shrink-0"
                   onContextMenu={(e) => e.preventDefault()}
                   draggable="false"
-                />
+              />
                 <div className="absolute inset-0" onContextMenu={(e) => e.preventDefault()}></div>
               </div>
               <div className="relative">
-                <Image
-                  src="/logos/RHF-ingenious-en-colour.png"
-                  alt="RHF"
-                  width={80}
-                  height={80}
+              <Image
+                src="/logos/RHF-ingenious-en-colour.png"
+                alt="RHF"
+            width={80}
+            height={80}
                    className="w-14 md:w-16 h-auto filter grayscale hover:grayscale-0 transition-all duration-300 flex-shrink-0"
                   onContextMenu={(e) => e.preventDefault()}
                   draggable="false"
-                />
+              />
                 <div className="absolute inset-0" onContextMenu={(e) => e.preventDefault()}></div>
               </div>
               <div className="relative">
-                <Image
-                  src="/logos/logo-with-wordmark.webp"
-                  alt="Logo with Wordmark"
-                  width={80}
-                  height={80}
+              <Image
+                src="/logos/logo-with-wordmark.webp"
+                alt="Logo with Wordmark"
+            width={80}
+            height={80}
                    className="w-14 md:w-16 h-auto filter grayscale hover:grayscale-0 transition-all duration-300 flex-shrink-0"
                   onContextMenu={(e) => e.preventDefault()}
                   draggable="false"
-                />
+              />
                 <div className="absolute inset-0" onContextMenu={(e) => e.preventDefault()}></div>
               </div>
               <div className="relative">
-                <Image
-                  src="/logos/logo.svg"
-                  alt="Logo"
-                  width={80}
-                  height={80}
+              <Image
+                src="/logos/logo.svg"
+                alt="Logo"
+            width={80}
+            height={80}
                    className="w-14 md:w-16 h-auto filter grayscale hover:grayscale-0 transition-all duration-300 flex-shrink-0"
                   onContextMenu={(e) => e.preventDefault()}
                   draggable="false"
-                />
+              />
                 <div className="absolute inset-0" onContextMenu={(e) => e.preventDefault()}></div>
               </div>
               <div className="relative">
-                <Image
-                  src="/logos/Screen Shot 2021-06-21 at 2.28.27 PM.png"
-                  alt="Partner Logo"
-                  width={80}
-                  height={80}
+              <Image
+                src="/logos/Screen Shot 2021-06-21 at 2.28.27 PM.png"
+                alt="Partner Logo"
+            width={80}
+            height={80}
                    className="w-14 md:w-16 h-auto filter grayscale hover:grayscale-0 transition-all duration-300 flex-shrink-0"
                   onContextMenu={(e) => e.preventDefault()}
                   draggable="false"
-                />
+              />
                 <div className="absolute inset-0" onContextMenu={(e) => e.preventDefault()}></div>
               </div>
             </div>
