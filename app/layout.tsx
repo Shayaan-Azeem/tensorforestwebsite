@@ -1,6 +1,10 @@
 import type { Metadata } from 'next'
-import { GeistSans } from 'geist/font/sans'
-import { GeistMono } from 'geist/font/mono'
+import { EB_Garamond } from 'next/font/google'
+
+const garamond = EB_Garamond({ 
+  subsets: ['latin'],
+  display: 'swap',
+})
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
@@ -17,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable}`}>
+      <body className={garamond.className}>
         {children}
         <Analytics />
       </body>
