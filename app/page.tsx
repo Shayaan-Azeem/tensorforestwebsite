@@ -13,20 +13,24 @@ import {
 } from "@/components/ui/dialog"
 import { DialogContent } from "@/components/ui/custom-dialog"
 import { useMediaQuery } from "@/hooks/use-media-query"
+import { ThemeToggle } from "@/components/theme-toggle"
 
 export default function AboutPage() {
   const isMobile = useMediaQuery("(max-width: 768px)");
   return (
-    <div className="min-h-screen bg-white p-8 md:p-16">
+    <div className="min-h-screen bg-background p-8 md:p-16 relative">
+      <div className="absolute top-4 right-4 md:top-8 md:right-8">
+        <ThemeToggle />
+      </div>
       <div className="max-w-xl mx-auto">
-        <div className="mb-4 -ml-12">
-          <div className="relative">
-          <Image
+        <div className="flex justify-between items-start mb-4">
+          <div className="relative -ml-12">
+            <Image
             src="/images/tensorforest-logo.png"
             alt="tensorforest logo"
             width={120}
             height={120}
-            className="object-contain"
+            className="object-contain dark:invert"
               onContextMenu={(e) => e.preventDefault()}
               draggable="false"
           />
@@ -34,7 +38,7 @@ export default function AboutPage() {
           </div>
         </div>
 
-        <div className="space-y-5 text-sm text-black tracking-tight">
+        <div className="space-y-5 text-sm text-foreground tracking-tight">
           <p>Hi! We&apos;re TensorForest</p>
 
           <p>We&apos;ve been building AI drones for the past year.</p>
@@ -47,7 +51,7 @@ export default function AboutPage() {
                     Our <span className="border-b border-dashed border-gray-400 hover:border-gray-600" style={{ lineHeight: '0.9em' }}>first prototype</span> generated forest risk maps using feature extraction on aerial imagery and vegetation indices.
                   </p>
                 </DialogTrigger>
-                <DialogContent className="w-[250px] !rounded-none bg-white p-4 border shadow-md">
+                <DialogContent className="w-[250px] !rounded-none bg-background p-4 border shadow-md">
                   <div className="space-y-4">
                     <div className="relative aspect-square w-full overflow-hidden">
                       <Image
@@ -60,7 +64,7 @@ export default function AboutPage() {
                       />
                       <div className="absolute inset-0" onContextMenu={(e) => e.preventDefault()}></div>
                     </div>
-                    <p className="italic text-sm text-gray-600">
+                    <p className="italic text-sm text-muted-foreground">
                       we competed and won bronze in world robot olympiad with this.
                     </p>
                   </div>
@@ -86,7 +90,7 @@ export default function AboutPage() {
                       />
                       <div className="absolute inset-0" onContextMenu={(e) => e.preventDefault()}></div>
                     </div>
-                    <p className="italic text-sm text-gray-600">
+                    <p className="italic text-sm text-muted-foreground">
                       we competed and won bronze in world robot olympiad with this.
                     </p>
                   </div>
@@ -101,7 +105,7 @@ export default function AboutPage() {
                     Our <span className="border-b border-dashed border-gray-400 hover:border-gray-600" style={{ lineHeight: '0.9em' }}>second prototype</span> added autonomous flight and onboard inference, so we could process data in real-time while covering bigger regions.
                   </p>
                 </DialogTrigger>
-                <DialogContent className="w-[250px] !rounded-none bg-white p-4 border shadow-md">
+                <DialogContent className="w-[250px] !rounded-none bg-background p-4 border shadow-md">
                   <div className="space-y-4">
                     <div className="relative aspect-square w-full overflow-hidden">
                       <Image
@@ -114,7 +118,7 @@ export default function AboutPage() {
                       />
                       <div className="absolute inset-0" onContextMenu={(e) => e.preventDefault()}></div>
                     </div>
-                    <p className="italic text-sm text-gray-600">
+                    <p className="italic text-sm text-muted-foreground">
                       we ended up crashing it during testing ;(
                     </p>
                   </div>
@@ -140,7 +144,7 @@ export default function AboutPage() {
                       />
                       <div className="absolute inset-0" onContextMenu={(e) => e.preventDefault()}></div>
                     </div>
-                    <p className="italic text-sm text-gray-600">
+                    <p className="italic text-sm text-muted-foreground">
                       we ended up crashing it during testing ;(
                     </p>
                   </div>
@@ -155,7 +159,7 @@ export default function AboutPage() {
                     Our <span className="border-b border-dashed border-gray-400 hover:border-gray-600" style={{ lineHeight: '0.9em' }}>third prototype</span> could build detailed vegetation maps, digital surface models, and orthomosaic outputs.
                   </p>
                 </DialogTrigger>
-                <DialogContent className="w-[250px] !rounded-none bg-white p-4 border shadow-md">
+                <DialogContent className="w-[250px] !rounded-none bg-background p-4 border shadow-md">
                   <div className="space-y-4">
                     <div className="relative aspect-square w-full overflow-hidden">
                       <Image
@@ -168,7 +172,7 @@ export default function AboutPage() {
                       />
                       <div className="absolute inset-0" onContextMenu={(e) => e.preventDefault()}></div>
                     </div>
-                    <p className="italic text-sm text-gray-600">
+                    <p className="italic text-sm text-muted-foreground">
                       don&apos;t worry we taught the drone to fly better
                     </p>
                   </div>
@@ -194,7 +198,7 @@ export default function AboutPage() {
                       />
                       <div className="absolute inset-0" onContextMenu={(e) => e.preventDefault()}></div>
                     </div>
-                    <p className="italic text-sm text-gray-600">
+                    <p className="italic text-sm text-muted-foreground">
                       don&apos;t worry we taught the drone to fly better
                     </p>
                   </div>
@@ -203,7 +207,7 @@ export default function AboutPage() {
             )}
           </div>
 
-          <p className="text-xs text-gray-500">
+          <p className="text-xs text-muted-foreground">
             We worked with <a href="https://www.oakville.ca/" target="_blank" rel="noopener noreferrer" className="text-inherit no-underline">the Town of Oakville</a> to map parks and forested regions across the city.
           </p>
 
@@ -215,7 +219,7 @@ export default function AboutPage() {
             Do you wanna join or support us?{' '}
             <a 
               href="mailto:tensorforest.team@gmail.com" 
-              className="text-blue-600 hover:text-blue-800 underline"
+              className="text-primary hover:text-primary/80 underline"
             >
               Let&apos;s talk
             </a>
@@ -230,7 +234,7 @@ export default function AboutPage() {
                 alt="E/F"
             width={80}
             height={80}
-                   className="w-14 md:w-16 h-auto filter grayscale hover:grayscale-0 transition-all duration-300 flex-shrink-0"
+                   className="w-14 md:w-16 h-auto filter grayscale hover:grayscale-0 transition-all duration-300 flex-shrink-0 dark:invert"
                   onContextMenu={(e) => e.preventDefault()}
                   draggable="false"
               />
@@ -242,7 +246,7 @@ export default function AboutPage() {
                 alt="RHF"
             width={80}
             height={80}
-                   className="w-14 md:w-16 h-auto filter grayscale hover:grayscale-0 transition-all duration-300 flex-shrink-0"
+                   className="w-14 md:w-16 h-auto filter grayscale hover:grayscale-0 transition-all duration-300 flex-shrink-0 dark:invert"
                   onContextMenu={(e) => e.preventDefault()}
                   draggable="false"
               />
@@ -254,7 +258,7 @@ export default function AboutPage() {
                 alt="Logo with Wordmark"
             width={80}
             height={80}
-                   className="w-14 md:w-16 h-auto filter grayscale hover:grayscale-0 transition-all duration-300 flex-shrink-0"
+                   className="w-14 md:w-16 h-auto filter grayscale hover:grayscale-0 transition-all duration-300 flex-shrink-0 dark:invert"
                   onContextMenu={(e) => e.preventDefault()}
                   draggable="false"
               />
@@ -266,7 +270,7 @@ export default function AboutPage() {
                 alt="Logo"
             width={80}
             height={80}
-                   className="w-14 md:w-16 h-auto filter grayscale hover:grayscale-0 transition-all duration-300 flex-shrink-0"
+                   className="w-14 md:w-16 h-auto filter grayscale hover:grayscale-0 transition-all duration-300 flex-shrink-0 dark:invert"
                   onContextMenu={(e) => e.preventDefault()}
                   draggable="false"
               />
@@ -278,7 +282,7 @@ export default function AboutPage() {
                 alt="Partner Logo"
             width={80}
             height={80}
-                   className="w-14 md:w-16 h-auto filter grayscale hover:grayscale-0 transition-all duration-300 flex-shrink-0"
+                   className="w-14 md:w-16 h-auto filter grayscale hover:grayscale-0 transition-all duration-300 flex-shrink-0 dark:invert"
                   onContextMenu={(e) => e.preventDefault()}
                   draggable="false"
               />

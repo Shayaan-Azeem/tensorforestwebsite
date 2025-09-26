@@ -1,15 +1,16 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { EB_Garamond } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/next'
+import { ThemeProvider } from '@/components/theme-provider'
+import './globals.css'
 
-const inter = Inter({ 
+const garamond = EB_Garamond({ 
   subsets: ['latin'],
   display: 'swap',
 })
-import { Analytics } from '@vercel/analytics/next'
-import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'TensorForest',
+  title: 'Tensorforest',
   description: 'Building AI drones for forest mapping and monitoring',
   generator: 'Next.js',
 }
@@ -20,10 +21,17 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        {children}
-        <Analytics />
+    <html lang="en" suppressHydrationWarning>
+      <body className={garamond.className}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          storageKey="tensorforest-theme"
+        >
+          {children}
+          <Analytics />
+        </ThemeProvider>
       </body>
     </html>
   )
