@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
-import { EB_Garamond } from 'next/font/google'
+import { Inter } from 'next/font/google'
 
-const garamond = EB_Garamond({ 
+const inter = Inter({ 
   subsets: ['latin'],
   display: 'swap',
 })
@@ -9,7 +9,7 @@ import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Tensorforest',
+  title: 'TensorForest',
   description: 'Building AI drones for forest mapping and monitoring',
   generator: 'Next.js',
 }
@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={garamond.className}>
+      <body className={inter.className}>
         {children}
         <Analytics />
       </body>

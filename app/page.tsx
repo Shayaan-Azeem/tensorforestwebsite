@@ -35,7 +35,7 @@ export default function AboutPage() {
         </div>
 
         <div className="space-y-5 text-sm text-black tracking-tight">
-          <p>Hi! We&apos;re Tensor Forest</p>
+          <p>Hi! We&apos;re TensorForest</p>
 
           <p>We&apos;ve been building AI drones for the past year.</p>
 
@@ -44,7 +44,7 @@ export default function AboutPage() {
               <Dialog>
                 <DialogTrigger asChild>
                   <p className="cursor-pointer active:text-gray-600 transition-colors">
-                    Our first prototype generated forest risk maps using feature extraction on aerial imagery and vegetation indices.
+                    Our <span className="border-b border-dashed border-gray-400 hover:border-gray-600" style={{ lineHeight: '0.9em' }}>first prototype</span> generated forest risk maps using feature extraction on aerial imagery and vegetation indices.
                   </p>
                 </DialogTrigger>
                 <DialogContent className="w-[250px] !rounded-none bg-white p-4 border shadow-md">
@@ -70,7 +70,7 @@ export default function AboutPage() {
               <HoverCard openDelay={0} closeDelay={0}>
                 <HoverCardTrigger asChild>
                   <p className="cursor-pointer hover:text-gray-600 transition-colors">
-                    Our first prototype generated forest risk maps using feature extraction on aerial imagery and vegetation indices.
+                    Our <span className="border-b border-dashed border-gray-400 hover:border-gray-600" style={{ lineHeight: '0.9em' }}>first prototype</span> generated forest risk maps using feature extraction on aerial imagery and vegetation indices.
                   </p>
                 </HoverCardTrigger>
                 <HoverCardContent className="w-[300px] cursor-move !rounded-none -translate-x-[50%]" onPointerDownCapture={(e) => e.preventDefault()}>
@@ -98,7 +98,7 @@ export default function AboutPage() {
               <Dialog>
                 <DialogTrigger asChild>
                   <p className="cursor-pointer active:text-gray-600 transition-colors">
-                    Our second prototype added autonomous flight and onboard inference, so we could process data in real-time while covering bigger regions.
+                    Our <span className="border-b border-dashed border-gray-400 hover:border-gray-600" style={{ lineHeight: '0.9em' }}>second prototype</span> added autonomous flight and onboard inference, so we could process data in real-time while covering bigger regions.
                   </p>
                 </DialogTrigger>
                 <DialogContent className="w-[250px] !rounded-none bg-white p-4 border shadow-md">
@@ -124,7 +124,7 @@ export default function AboutPage() {
               <HoverCard openDelay={0} closeDelay={0}>
                 <HoverCardTrigger asChild>
                   <p className="cursor-pointer hover:text-gray-600 transition-colors">
-                    Our second prototype added autonomous flight and onboard inference, so we could process data in real-time while covering bigger regions.
+                    Our <span className="border-b border-dashed border-gray-400 hover:border-gray-600" style={{ lineHeight: '0.9em' }}>second prototype</span> added autonomous flight and onboard inference, so we could process data in real-time while covering bigger regions.
                   </p>
                 </HoverCardTrigger>
                 <HoverCardContent className="w-[300px] cursor-move !rounded-none -translate-x-[50%]" onPointerDownCapture={(e) => e.preventDefault()}>
@@ -152,7 +152,7 @@ export default function AboutPage() {
               <Dialog>
                 <DialogTrigger asChild>
                   <p className="cursor-pointer active:text-gray-600 transition-colors">
-                    Our third prototype could build detailed vegetation maps, digital surface models, and orthomosaic outputs.
+                    Our <span className="border-b border-dashed border-gray-400 hover:border-gray-600" style={{ lineHeight: '0.9em' }}>third prototype</span> could build detailed vegetation maps, digital surface models, and orthomosaic outputs.
                   </p>
                 </DialogTrigger>
                 <DialogContent className="w-[250px] !rounded-none bg-white p-4 border shadow-md">
@@ -178,7 +178,7 @@ export default function AboutPage() {
               <HoverCard openDelay={0} closeDelay={0}>
                 <HoverCardTrigger asChild>
                   <p className="cursor-pointer hover:text-gray-600 transition-colors">
-                    Our third prototype could build detailed vegetation maps, digital surface models, and orthomosaic outputs.
+                    Our <span className="border-b border-dashed border-gray-400 hover:border-gray-600" style={{ lineHeight: '0.9em' }}>third prototype</span> could build detailed vegetation maps, digital surface models, and orthomosaic outputs.
                   </p>
                 </HoverCardTrigger>
                 <HoverCardContent className="w-[300px] cursor-move !rounded-none -translate-x-[50%]" onPointerDownCapture={(e) => e.preventDefault()}>
